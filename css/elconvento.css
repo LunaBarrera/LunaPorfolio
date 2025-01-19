@@ -499,6 +499,7 @@ body{
 
 }
 
+
 .Slide-background{
     width: 90%;
     padding: .625rem 0;
@@ -506,11 +507,7 @@ body{
 
     position: relative;
 }
-@media (max-width: 768px){
-    .Slide-background{
-        width: 100%;
-    }
-}
+
 
 .Slide-wrapper{
     width: calc( 50% * var(--numImagenes)); 
@@ -583,6 +580,7 @@ body{
 
     object-fit: contain;
 }
+
 .Slide-div--p{
     width: 100%;
     min-height: 31.25rem;
@@ -671,6 +669,14 @@ body{
         width: 1.875rem;
     }
 }
+
+
+/* No he sabido hacer el responsive del Slide, así que el Slide no se ajusta a los diferentes anchos de pantalla. Para el futuro si no consigo arreglarlo haré una galería de imagenes grid que muestre las imagenes */
+
+
+
+
+
 
 .Footer-div{
     width: 100%;
