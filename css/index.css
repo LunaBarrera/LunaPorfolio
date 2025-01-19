@@ -823,6 +823,8 @@ body{
     justify-content: center;
     align-items: start;
 }
+
+
 .Proyectos-li{
     width: calc(100% / 2 - 1.25rem);
     display: flex;
@@ -843,6 +845,7 @@ body{
 
     padding: .625rem;
 }
+
 
 .Proyectos-icono{
     width: 4.375rem;
@@ -921,47 +924,8 @@ body{
 
 
 }
-@media (max-width: 750px){
-    .Proyectos-a{
-        line-height: 1.25rem;
-    }
-    .Proyectos-div--grafico,
-    .Proyectos-div--web{
-        padding: 4.375rem 0 0 1.25rem;
-    }
-}
-@media (max-width: 650px){
-    .Proyectos-a{
-        font-size: .5625rem;
-    }
-}
-@media (max-width: 550px){
-    .Proyectos-a{
-        font-size: .5rem;
-        line-height: .9375rem;
-    }
-    .Proyectos-div--grafico,
-    .Proyectos-div--web{
-        padding: 5rem 0 0 1.25rem;
-    }
-}
-@media (max-width: 490px){
-    .Proyectos-a{
-        font-size: .4375rem;
-        line-height: .625rem;
-    }
-}
-@media (max-width: 440px){
-    .Proyectos-div--grafico,
-    .Proyectos-div--web{
-        padding: 5rem 0 0 .625rem;
-    }
-}
-@media (max-width: 400px){
-    .Proyectos-a{
-        font-size: .375rem;
-    }
-}
+
+
 /* Uso de hover para jugar con los colores se desactiva en el responsive */
 
 .Proyectos-a:hover{
@@ -975,6 +939,39 @@ body{
     .Proyectos-a:hover{
         display: none;
     }
+}
+
+
+@media (max-width: 768px){
+    .Proyectos-ul{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .Proyectos{
+        min-height: 100vh;
+    }
+    .Proyectos-div{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: center;
+    }
+    .Proyectos-li{
+        width: 100%;
+    }
+    .Proyectos-a{
+        text-align: center;
+        line-height: 20px;
+    }
+    .Proyectos-div--grafico{
+        padding: 70px 0 0 0;
+    }
+    .Proyectos-div--web{
+        padding: 70px 0 0 0;
+    }
+    
 }
 
 
@@ -1065,6 +1062,12 @@ body{
     z-index: 1;
 }
 
+@media (max-width: 500px){
+    .Info-div{
+        padding: 20px;
+    }
+}
+
 .Info-p{
     width: 100%;
 
@@ -1081,6 +1084,7 @@ body{
     text-shadow: var(--c-lightred) 0rem 0 .3125rem;
 
 }
+
 .Info-ul{
    width: 70%;
 
@@ -1089,6 +1093,12 @@ body{
    justify-content: start;
    align-content: start;
 }   
+
+@media (max-width: 500px){
+    .Info-ul{
+        width: 100%;
+    }
+}
 
 
 .Info-li--mailto{
@@ -1106,6 +1116,12 @@ body{
     
     margin: 0 0 .625rem 0;
 
+}
+
+@media (max-width: 500px){
+    .Info-li--mailto{
+        width: 100%;
+    }
 }
 /* Uso de hover para jugar con los colores se desactiva en el responsive */
 
@@ -1147,29 +1163,13 @@ body{
         font-size: .625rem;
     }
 }
-@media (max-width: 440px){
-    .Info-a{
-        font-size: .5rem;
-    }
-}
-@media (max-width: 380px){
-    .Info-a{
-        font-size: .375rem;
-    }
-}
+
 
 .Info-a--mailto{
     color: var(--c-red);
     font-size: var(--f-nav);
 }
-@media (max-width: 500px){
-    .Info-a--mailto{
-        font-size: .375rem;
-    }
-    .Info-li--mailto{
-        padding: .3125rem .3125rem .3125rem .625rem;
-    }
-}
+
 .Info-svg{
 
     width: .9375rem;
