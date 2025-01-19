@@ -117,5 +117,3 @@ prev.addEventListener(`click`, ()=>{
     mostrarImagen()
 })
 
-
-
