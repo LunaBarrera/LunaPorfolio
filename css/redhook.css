@@ -766,7 +766,7 @@ body{
     width: 100%;
     min-height: 100vh;
     background-color: black;
-    padding: 20px;
+    padding: 50px;
 
     display: none;
 
@@ -808,17 +808,6 @@ body{
     margin: 10px 0;
 
 }
-.Fenomeno{}
-.Fenomeno-div{}
-.Fenomeno-front--uno{}
-.Fenomeno-back{}
-.Fenomeno-estructura--dos{}
-.Fenomeno-front--dos{}
-.Fenomeno-back{}
-.Fenomeno-front--tres{}
-.Fenomeno-back{}
-
-
 
 
 
