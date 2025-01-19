@@ -500,6 +500,11 @@ body{
     overflow: hidden;
 
 }
+@media (max-width: 768px){
+    .Slide{
+        display: none;
+    }
+}
 
 .Slide-background{
     width: 90%;
@@ -507,11 +512,6 @@ body{
     margin: auto;
 
     position: relative;
-}
-@media (max-width: 768px){
-    .Slide-background{
-        width: 100%;
-    }
 }
 
 .Slide-wrapper{
@@ -556,16 +556,6 @@ body{
     top: calc( 50% - 20rem );
 
 }
-@media (max-width: 768px){
-    .Slide-button{
-        width: 10rem;
-    }
-}
-@media (max-width: 375px){
-    .Slide-button{
-        width: 5rem;
-    }
-}
 .Next{
     right: 0;
 
@@ -588,12 +578,42 @@ body{
 
     color: yellow;
 }
+
+
+
+
+.Gallery{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    padding: 50px;
+
+    display: none;
+
+}
 @media (max-width: 768px){
-    .Next-svg, .Prev-svg{
-        width: 1.875rem;
+    .Gallery{
+        display: block;
     }
 }
+.Gallery-div{
+    width: 100%;
+    min-height: 100vh;
 
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+
+  
+}
+
+.Gallery-img{
+    width: 70%;
+    margin: auto;
+
+}
 
 .Footer-div{
     width: 100%;
