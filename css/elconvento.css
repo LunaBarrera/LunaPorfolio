@@ -110,7 +110,7 @@ body{
 }
 .Nav-a:hover{
     color: red;
-    text-shadow: red 0rem 0 .3125rem;
+    text-shadow: red 0 0 .3125rem;
 }
 @media (max-width: 768px){
     .Nav-a:hover{
@@ -119,7 +119,7 @@ body{
 }
 .Nav-a--work.isVisible{
     color: red;
-    text-shadow: red 0rem 0 .3125rem;
+    text-shadow: red 0 0 .3125rem;
 }
 
 @media (max-width: 768px){
@@ -145,7 +145,7 @@ body{
     box-shadow: 0rem 0rem .625rem .0625rem gray;
 
     margin: 2.5rem 0 0 0;
-    padding: 20rem;
+    padding: 1.25rem;
 
 
     position: absolute;
@@ -170,7 +170,8 @@ body{
     width: 90%;
     padding: .625rem;
 
-    border-bottom: .0625rem solid white;
+    border-bottom: .0625rem solid white
+;
 }
 
 .Menu-a{
@@ -230,7 +231,6 @@ body{
 }
 
 
-
 .Menu-a--contacto{
     margin: 0 0 -0.3125rem 0;
 }
@@ -241,7 +241,7 @@ body{
     align-items: end;
     gap: .625rem;
 
-    padding: 10rem 0;
+    padding: .625rem 0;
 
     display: none;
 
@@ -498,7 +498,11 @@ body{
     overflow: hidden;
 
 }
-
+@media (max-width:768px){
+    .Slide{
+        display: none;
+    }
+}
 
 .Slide-background{
     width: 90%;
@@ -671,7 +675,60 @@ body{
 }
 
 
-/* No he sabido hacer el responsive del Slide, así que el Slide no se ajusta a los diferentes anchos de pantalla. Para el futuro si no consigo arreglarlo haré una galería de imagenes grid que muestre las imagenes */
+
+
+
+.Gallery{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    padding: 50px;
+
+    display: none;
+
+}
+@media (max-width: 768px){
+    .Gallery{
+        display: block;
+    }
+}
+.Gallery-div{
+    width: 100%;
+    min-height: 100vh;
+
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 10px;
+
+  
+}
+.Gallery-iframe{
+    margin: auto;
+}
+
+.Gallery-img{
+    width: 70%;
+    max-width: 400px;
+    margin: auto;
+
+}
+.Gallery-wrapper{
+   
+
+}
+.Gallery-p{
+    font-size: var(--f-nav);
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    color: var(--c-white);
+    text-align: justify;
+
+    margin: 10px 0;
+
+}
 
 
 
