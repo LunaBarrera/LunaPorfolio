@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Koto Studio</title>
+    <link rel="stylesheet" href="css/kotostudio.css">
+    <script src="js/kotostudio.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    
+
+</head>
+<body>
+
+
+<div class="Cursor">
+    <span class="Cursor-span Cursor-span--slide">View</span>
+    <span class="Cursor-span Cursor-span--next">
+        <svg class="Cursor-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg>
+    </span>
+    <span class="Cursor-span Cursor-span--prev">
+        <svg class="Cursor-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg>
+    </span>
+    <span class="Cursor-span Cursor-span--feed">read</span>
+    <div class="Cursor-scale"></div>
+</div>
+  
+
+<div class="Preload">
+    <svg class="Preload-svg" width="61" height="30" viewBox="0 0 61 30" xmlns="http://www.w3.org/2000/svg">
+        <title>Koto</title>
+        <path d="M12.6723 0.259651C12.8387 0.0933671 13.0643 -1.86297e-05 13.2995 1.99376e-06H16.7249C16.9006 6.31617e-05 17.0724 0.0522445 17.2184 0.149951C17.3645 0.247657 17.4784 0.386502 17.5456 0.548936C17.6128 0.71137 17.6304 0.890102 17.5961 1.06254C17.5619 1.23498 17.4773 1.39339 17.3531 1.51774L12.5061 6.36841L7.65918 11.2191C7.57661 11.3016 7.5111 11.3996 7.4664 11.5074C7.4217 11.6153 7.3987 11.7309 7.3987 11.8477C7.3987 11.9644 7.4217 12.08 7.4664 12.1879C7.5111 12.2958 7.57661 12.3937 7.65918 12.4762L17.3755 22.2009C17.4971 22.3237 17.5798 22.4798 17.613 22.6494C17.6463 22.8191 17.6287 22.9948 17.5625 23.1545C17.4963 23.3142 17.3844 23.4507 17.2408 23.5469C17.0973 23.6432 16.9285 23.6948 16.7558 23.6953H13.3023C13.0649 23.6953 12.8373 23.6009 12.6695 23.4329L5.73179 16.4905C5.60604 16.365 5.44595 16.2796 5.27174 16.2451C5.09753 16.2106 4.917 16.2285 4.75294 16.2965C4.58888 16.3646 4.44864 16.4797 4.34992 16.6274C4.2512 16.7752 4.19843 16.9489 4.19827 17.1266V22.7978C4.19839 22.9156 4.17531 23.0323 4.13033 23.1412C4.08536 23.2501 4.01938 23.349 3.93616 23.4324C3.85294 23.5157 3.75413 23.5819 3.64535 23.627C3.53658 23.6721 3.41999 23.6953 3.30224 23.6953H0.888563C0.652901 23.6953 0.426892 23.6016 0.260254 23.4349C0.0936161 23.2681 0 23.042 0 22.8062V0.896632C0 0.658831 0.0944029 0.43077 0.262441 0.262619C0.430479 0.0944681 0.658388 1.99376e-06 0.896029 1.99376e-06H3.32371C3.43872 -0.000243649 3.55264 0.0222115 3.65896 0.0660818C3.76529 0.109952 3.86192 0.174376 3.94332 0.255666C4.02473 0.336955 4.08932 0.433514 4.13339 0.539814C4.17746 0.646114 4.20014 0.760067 4.20014 0.875151V6.63133C4.20008 6.8045 4.25142 6.97378 4.34765 7.11771C4.44387 7.26165 4.58065 7.37374 4.74062 7.43977C4.9006 7.50581 5.07657 7.52281 5.24622 7.48863C5.41587 7.45444 5.57155 7.37061 5.69352 7.24776L12.6723 0.259651Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9712 4.99774C20.3251 4.09267 21.9168 3.60969 23.545 3.60987C25.7275 3.61259 27.8197 4.4814 29.3628 6.02572C30.9059 7.57005 31.7739 9.66378 31.7764 11.8477C31.7764 13.477 31.2935 15.0697 30.3889 16.4244C29.4843 17.7791 28.1985 18.835 26.6942 19.4585C25.1899 20.0819 23.5347 20.245 21.9377 19.9271C20.3408 19.6092 18.8739 18.8245 17.7227 17.6723C16.5714 16.5202 15.7874 15.0522 15.4699 13.4542C15.1524 11.8562 15.3155 10.1998 15.9387 8.69455C16.562 7.18931 17.6173 5.9028 18.9712 4.99774ZM21.3035 15.2035C21.967 15.647 22.7471 15.8836 23.545 15.8834C24.6143 15.8822 25.6394 15.4566 26.3955 14.7C27.1516 13.9434 27.5769 12.9176 27.5781 11.8477C27.5783 11.0492 27.3418 10.2686 26.8986 9.60464C26.4555 8.94066 25.8254 8.42312 25.0883 8.11748C24.3511 7.81184 23.5399 7.73182 22.7573 7.88754C21.9747 8.04327 21.2559 8.42775 20.6916 8.99235C20.1274 9.55695 19.7432 10.2763 19.5876 11.0594C19.432 11.8426 19.5119 12.6543 19.8174 13.3919C20.1228 14.1296 20.64 14.76 21.3035 15.2035Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M52.7677 3.60987C51.1395 3.60987 49.5479 4.09301 48.1941 4.99819C46.8403 5.90337 45.7852 7.18994 45.1621 8.6952C44.539 10.2005 44.376 11.8568 44.6936 13.4548C45.0113 15.0527 45.7953 16.5206 46.9466 17.6727C48.0979 18.8247 49.5648 19.6093 51.1617 19.9272C52.7586 20.245 54.4138 20.0819 55.9181 19.4584C57.4223 18.8349 58.708 17.779 59.6126 16.4243C60.5172 15.0696 61 13.4769 61 11.8477C60.9975 9.66362 60.1294 7.56975 58.5861 6.0254C57.0428 4.48105 54.9503 3.61234 52.7677 3.60987ZM52.7677 15.8834C51.9698 15.8834 51.1899 15.6467 50.5265 15.2031C49.8631 14.7595 49.346 14.129 49.0407 13.3913C48.7354 12.6536 48.6556 11.8419 48.8113 11.0589C48.967 10.2758 49.3513 9.55652 49.9156 8.99202C50.4799 8.42751 51.1987 8.04313 51.9813 7.88747C52.7639 7.73182 53.575 7.8119 54.3121 8.11757C55.0492 8.42324 55.6792 8.94078 56.1223 9.60474C56.5655 10.2687 56.8019 11.0492 56.8017 11.8477C56.8007 12.9179 56.3754 13.944 55.619 14.7006C54.8627 15.4573 53.8372 15.8827 52.7677 15.8834Z"></path>
+        <path d="M43.7962 16.4971V18.9198C43.796 19.1541 43.7029 19.3787 43.5374 19.5443C43.3718 19.71 43.1474 19.8031 42.9133 19.8034H33.3855C33.155 19.8034 32.934 19.7118 32.771 19.5487C32.6081 19.3856 32.5165 19.1644 32.5165 18.9338V16.4821C32.5168 16.2487 32.6096 16.0249 32.7747 15.8599C32.9397 15.695 33.1634 15.6023 33.3967 15.6023H35.1617C35.3991 15.6023 35.6268 15.5079 35.7946 15.3399C35.9625 15.172 36.0568 14.9441 36.0568 14.7066V4.78575C36.0568 4.66817 36.0799 4.55174 36.1249 4.44313C36.1699 4.33451 36.2359 4.23583 36.319 4.15273C36.4021 4.06963 36.5008 4.00374 36.6094 3.95883C36.718 3.91392 36.8344 3.89087 36.9519 3.89099H39.3506C39.5907 3.89099 39.821 3.98644 39.9908 4.15634C40.1606 4.32625 40.256 4.55668 40.256 4.79696V14.7057C40.2559 14.8234 40.2789 14.9399 40.3239 15.0487C40.3688 15.1575 40.4347 15.2563 40.5178 15.3396C40.601 15.4229 40.6997 15.4889 40.8083 15.534C40.917 15.5791 41.0335 15.6023 41.1511 15.6023H42.9021C43.1392 15.6023 43.3667 15.6966 43.5343 15.8644C43.702 16.0322 43.7962 16.2597 43.7962 16.4971Z"></path>
+        <path d="M51.3117 24.832C51.5456 25.8121 51.7805 26.7915 52.0164 27.7703C52.0321 27.8497 52.0319 27.9313 52.0158 28.0106C51.9998 28.0898 51.9682 28.1651 51.9229 28.2321C51.8776 28.2991 51.8195 28.3564 51.7519 28.4007C51.6843 28.4451 51.6086 28.4755 51.5292 28.4904C42.7318 30.5032 33.594 30.5032 24.7967 28.4904C24.7156 28.4753 24.6384 28.4443 24.5694 28.3991C24.5005 28.3539 24.4411 28.2955 24.3949 28.2272C24.3486 28.159 24.3163 28.0822 24.2999 28.0014C24.2835 27.9205 24.2832 27.8372 24.2992 27.7563C24.5338 26.7787 24.7684 25.8009 25.003 24.8227C25.0407 24.6714 25.1366 24.5412 25.2698 24.4602C25.4029 24.3792 25.5626 24.3541 25.7142 24.3902C33.9007 26.2647 42.4046 26.2647 50.5911 24.3902C50.7452 24.3542 50.9072 24.3803 51.0421 24.463C51.177 24.5457 51.2738 24.6783 51.3117 24.832Z"></path>
+    </svg>
+</div>
+
+
+<header class="Header">
+    <h1 class="Header-h1">
+        <span class="Header-span">koto</span>
+        <svg class="Header-svg" width="61" height="30" viewBox="0 0 61 30" xmlns="http://www.w3.org/2000/svg">
+            <title>Koto</title>
+            <path d="M12.6723 0.259651C12.8387 0.0933671 13.0643 -1.86297e-05 13.2995 1.99376e-06H16.7249C16.9006 6.31617e-05 17.0724 0.0522445 17.2184 0.149951C17.3645 0.247657 17.4784 0.386502 17.5456 0.548936C17.6128 0.71137 17.6304 0.890102 17.5961 1.06254C17.5619 1.23498 17.4773 1.39339 17.3531 1.51774L12.5061 6.36841L7.65918 11.2191C7.57661 11.3016 7.5111 11.3996 7.4664 11.5074C7.4217 11.6153 7.3987 11.7309 7.3987 11.8477C7.3987 11.9644 7.4217 12.08 7.4664 12.1879C7.5111 12.2958 7.57661 12.3937 7.65918 12.4762L17.3755 22.2009C17.4971 22.3237 17.5798 22.4798 17.613 22.6494C17.6463 22.8191 17.6287 22.9948 17.5625 23.1545C17.4963 23.3142 17.3844 23.4507 17.2408 23.5469C17.0973 23.6432 16.9285 23.6948 16.7558 23.6953H13.3023C13.0649 23.6953 12.8373 23.6009 12.6695 23.4329L5.73179 16.4905C5.60604 16.365 5.44595 16.2796 5.27174 16.2451C5.09753 16.2106 4.917 16.2285 4.75294 16.2965C4.58888 16.3646 4.44864 16.4797 4.34992 16.6274C4.2512 16.7752 4.19843 16.9489 4.19827 17.1266V22.7978C4.19839 22.9156 4.17531 23.0323 4.13033 23.1412C4.08536 23.2501 4.01938 23.349 3.93616 23.4324C3.85294 23.5157 3.75413 23.5819 3.64535 23.627C3.53658 23.6721 3.41999 23.6953 3.30224 23.6953H0.888563C0.652901 23.6953 0.426892 23.6016 0.260254 23.4349C0.0936161 23.2681 0 23.042 0 22.8062V0.896632C0 0.658831 0.0944029 0.43077 0.262441 0.262619C0.430479 0.0944681 0.658388 1.99376e-06 0.896029 1.99376e-06H3.32371C3.43872 -0.000243649 3.55264 0.0222115 3.65896 0.0660818C3.76529 0.109952 3.86192 0.174376 3.94332 0.255666C4.02473 0.336955 4.08932 0.433514 4.13339 0.539814C4.17746 0.646114 4.20014 0.760067 4.20014 0.875151V6.63133C4.20008 6.8045 4.25142 6.97378 4.34765 7.11771C4.44387 7.26165 4.58065 7.37374 4.74062 7.43977C4.9006 7.50581 5.07657 7.52281 5.24622 7.48863C5.41587 7.45444 5.57155 7.37061 5.69352 7.24776L12.6723 0.259651Z"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9712 4.99774C20.3251 4.09267 21.9168 3.60969 23.545 3.60987C25.7275 3.61259 27.8197 4.4814 29.3628 6.02572C30.9059 7.57005 31.7739 9.66378 31.7764 11.8477C31.7764 13.477 31.2935 15.0697 30.3889 16.4244C29.4843 17.7791 28.1985 18.835 26.6942 19.4585C25.1899 20.0819 23.5347 20.245 21.9377 19.9271C20.3408 19.6092 18.8739 18.8245 17.7227 17.6723C16.5714 16.5202 15.7874 15.0522 15.4699 13.4542C15.1524 11.8562 15.3155 10.1998 15.9387 8.69455C16.562 7.18931 17.6173 5.9028 18.9712 4.99774ZM21.3035 15.2035C21.967 15.647 22.7471 15.8836 23.545 15.8834C24.6143 15.8822 25.6394 15.4566 26.3955 14.7C27.1516 13.9434 27.5769 12.9176 27.5781 11.8477C27.5783 11.0492 27.3418 10.2686 26.8986 9.60464C26.4555 8.94066 25.8254 8.42312 25.0883 8.11748C24.3511 7.81184 23.5399 7.73182 22.7573 7.88754C21.9747 8.04327 21.2559 8.42775 20.6916 8.99235C20.1274 9.55695 19.7432 10.2763 19.5876 11.0594C19.432 11.8426 19.5119 12.6543 19.8174 13.3919C20.1228 14.1296 20.64 14.76 21.3035 15.2035Z"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M52.7677 3.60987C51.1395 3.60987 49.5479 4.09301 48.1941 4.99819C46.8403 5.90337 45.7852 7.18994 45.1621 8.6952C44.539 10.2005 44.376 11.8568 44.6936 13.4548C45.0113 15.0527 45.7953 16.5206 46.9466 17.6727C48.0979 18.8247 49.5648 19.6093 51.1617 19.9272C52.7586 20.245 54.4138 20.0819 55.9181 19.4584C57.4223 18.8349 58.708 17.779 59.6126 16.4243C60.5172 15.0696 61 13.4769 61 11.8477C60.9975 9.66362 60.1294 7.56975 58.5861 6.0254C57.0428 4.48105 54.9503 3.61234 52.7677 3.60987ZM52.7677 15.8834C51.9698 15.8834 51.1899 15.6467 50.5265 15.2031C49.8631 14.7595 49.346 14.129 49.0407 13.3913C48.7354 12.6536 48.6556 11.8419 48.8113 11.0589C48.967 10.2758 49.3513 9.55652 49.9156 8.99202C50.4799 8.42751 51.1987 8.04313 51.9813 7.88747C52.7639 7.73182 53.575 7.8119 54.3121 8.11757C55.0492 8.42324 55.6792 8.94078 56.1223 9.60474C56.5655 10.2687 56.8019 11.0492 56.8017 11.8477C56.8007 12.9179 56.3754 13.944 55.619 14.7006C54.8627 15.4573 53.8372 15.8827 52.7677 15.8834Z"></path>
+            <path d="M43.7962 16.4971V18.9198C43.796 19.1541 43.7029 19.3787 43.5374 19.5443C43.3718 19.71 43.1474 19.8031 42.9133 19.8034H33.3855C33.155 19.8034 32.934 19.7118 32.771 19.5487C32.6081 19.3856 32.5165 19.1644 32.5165 18.9338V16.4821C32.5168 16.2487 32.6096 16.0249 32.7747 15.8599C32.9397 15.695 33.1634 15.6023 33.3967 15.6023H35.1617C35.3991 15.6023 35.6268 15.5079 35.7946 15.3399C35.9625 15.172 36.0568 14.9441 36.0568 14.7066V4.78575C36.0568 4.66817 36.0799 4.55174 36.1249 4.44313C36.1699 4.33451 36.2359 4.23583 36.319 4.15273C36.4021 4.06963 36.5008 4.00374 36.6094 3.95883C36.718 3.91392 36.8344 3.89087 36.9519 3.89099H39.3506C39.5907 3.89099 39.821 3.98644 39.9908 4.15634C40.1606 4.32625 40.256 4.55668 40.256 4.79696V14.7057C40.2559 14.8234 40.2789 14.9399 40.3239 15.0487C40.3688 15.1575 40.4347 15.2563 40.5178 15.3396C40.601 15.4229 40.6997 15.4889 40.8083 15.534C40.917 15.5791 41.0335 15.6023 41.1511 15.6023H42.9021C43.1392 15.6023 43.3667 15.6966 43.5343 15.8644C43.702 16.0322 43.7962 16.2597 43.7962 16.4971Z"></path>
+            <path d="M51.3117 24.832C51.5456 25.8121 51.7805 26.7915 52.0164 27.7703C52.0321 27.8497 52.0319 27.9313 52.0158 28.0106C51.9998 28.0898 51.9682 28.1651 51.9229 28.2321C51.8776 28.2991 51.8195 28.3564 51.7519 28.4007C51.6843 28.4451 51.6086 28.4755 51.5292 28.4904C42.7318 30.5032 33.594 30.5032 24.7967 28.4904C24.7156 28.4753 24.6384 28.4443 24.5694 28.3991C24.5005 28.3539 24.4411 28.2955 24.3949 28.2272C24.3486 28.159 24.3163 28.0822 24.2999 28.0014C24.2835 27.9205 24.2832 27.8372 24.2992 27.7563C24.5338 26.7787 24.7684 25.8009 25.003 24.8227C25.0407 24.6714 25.1366 24.5412 25.2698 24.4602C25.4029 24.3792 25.5626 24.3541 25.7142 24.3902C33.9007 26.2647 42.4046 26.2647 50.5911 24.3902C50.7452 24.3542 50.9072 24.3803 51.0421 24.463C51.177 24.5457 51.2738 24.6783 51.3117 24.832Z"></path>
+        </svg>
+    </h1>
+    <nav class="Header-nav Nav">
+        <ul class="Nav-ul">
+            <li class="Nav-li">
+                <a href="#" class="Nav-a" title="disable" >work</a>
+            </li>
+            <li class="Nav-li">
+                <a href="#" class="Nav-a" title="disable">about</a>
+            </li>
+            <li class="Nav-li">
+                <a href="#" class="Nav-a" title="disable">careers</a>
+            </li>
+            <li class="Nav-li">
+                <a href="#" class="Nav-a" title="disable">contact</a>
+            </li>
+            <li class="Nav-li Menu">
+                <a href="#" class="Nav-a" title="disable">menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="Main">
+    <section class="Main-section Hero">
+        <div class="Hero-wrapper">
+            <p class="Hero-parrafo">
+                <span class="Hero-span">Optimists building</span>
+                <span class="Hero-span Especial Brand">brand</span>
+                <span class="Hero-span">and</span>
+                <span class="Hero-span Especial Digital Rest">digital</span>
+                <span class="Hero-span">for the most impactful</span>
+                <span class="Hero-span Especial Companies Middle">companies</span>
+                <span class="Hero-span">of today and the</span>
+                <span class="Hero-span Especial Founders">founders</span>
+                <span class="Hero-span">defining tomorrow</span>
+            </p>
+            <div class="Hero-button">
+                <svg class="Hero-svg" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.5 39.5">
+                    <circle class="cls-2" cx="19.75" cy="19.75" r="19.25"/>
+                      <g>
+                        <line class="cls-1" x1="19.74" y1="15.93" x2="19.74" y2="23.45"/>
+                        <line class="cls-1" x1="16.36" y1="19.74" x2="19.73" y2="23.57"/>
+                        <line class="cls-1" x1="23.14" y1="19.74" x2="19.77" y2="23.57"/>
+                      </g>
+                    </svg>
+            </div>
+        </div>
+        <div class="Hero-grid">
+            <div class="Hero-background">
+                <div class="Hero-div">
+                    <div class="Hero-container">
+                        <a href="#" class="Hero-a" title="disable">freetrade</a>
+                        <picture class="Hero-picture">
+                            <img src="assets/Feed-5.png" alt="Koto Studio" loading="lazy" class="Hero-img">
+                        </picture>               
+                    </div>
+                    <div class="Hero-container">
+                        <a href="#" class="Hero-a" title="disable">freetrade</a>
+                        <picture class="Hero-picture">
+                            <img src="assets/Feed-5.png" alt="Koto Studio" loading="lazy" class="Hero-img">
+                        </picture>               
+                    </div>
+                    <div class="Hero-container">
+                        <a href="#" class="Hero-a" title="disable">freetrade</a>
+                        <picture class="Hero-picture">
+                            <img src="assets/Feed-5.png" alt="Koto Studio" loading="lazy" class="Hero-img">
+                        </picture>               
+                    </div>
+                    <div class="Hero-container">
+                        <a href="#" class="Hero-a" title="disable">freetrade</a>
+                        <picture class="Hero-picture">
+                            <img src="assets/Feed-5.png" alt="Koto Studio" loading="lazy" class="Hero-img">
+                        </picture>               
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Main-section Slide">
+        <div class="Slide-background">
+            <div class="Slide-wrapper">
+                <div class="Slide-div isActive">
+                    <a href="#" class="Slide-a" title="disable">freetrade</a>
+                    <video class="Slide-video" autoplay muted loop playsinline loading="lazy"><source data-src="https://player.vimeo.com/progressive_redirect/playback/1008842217/rendition/720p/file.mp4?loc=external&amp;signature=2c6d63537498f0fb80653a36631ef716c106ee8b5f89aee3a2a3827ad598664b" type="video/mp4" src="https://player.vimeo.com/progressive_redirect/playback/1008842217/rendition/720p/file.mp4?loc=external&amp;signature=2c6d63537498f0fb80653a36631ef716c106ee8b5f89aee3a2a3827ad598664b"></video>
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">fitbit ace lte</a>
+                    <video class="Slide-video" autoplay muted loop playsinline loading="lazy" ><source data-src="https://player.vimeo.com/progressive_redirect/playback/990236679/rendition/1080p/file.mp4?loc=external&amp;signature=ba90fa02dd97c5671fdd4c73c5ad8490b8ac36b7f71d3a27027415ec718a1c7c" type="video/mp4" src="https://player.vimeo.com/progressive_redirect/playback/990236679/rendition/1080p/file.mp4?loc=external&amp;signature=ba90fa02dd97c5671fdd4c73c5ad8490b8ac36b7f71d3a27027415ec718a1c7c"></video>
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">fluz</a>
+                    <picture class="Slide-picture">
+                    <img class="Slide-img" src="./assets/Slide-3.jpeg" alt="Koto Studio" loading="lazy">  
+                    </picture>
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">microsoft</a>
+                    <video class="Slide-video" autoplay muted loop playsinline loading="lazy"><source data-src="https://player.vimeo.com/progressive_redirect/playback/957618859/rendition/720p/file.mp4?loc=external&amp;signature=eef79954e2de9e7976550020854fe53e952ea5f875a8acf6c6eb11f061e08cd7" type="video/mp4" src="https://player.vimeo.com/progressive_redirect/playback/957618859/rendition/720p/file.mp4?loc=external&amp;signature=eef79954e2de9e7976550020854fe53e952ea5f875a8acf6c6eb11f061e08cd7"></video>
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">call of duty®</a>
+                    <video class="Slide-video" autoplay muted loop playsinline loading="lazy"><source data-src="https://player.vimeo.com/progressive_redirect/playback/933666610/rendition/1080p/file.mp4?loc=external&amp;signature=8b8ba54d651b7603f373209aaec33f850b5c1c2677346cc3364086f129c1f4db" type="video/mp4" src="https://player.vimeo.com/progressive_redirect/playback/933666610/rendition/1080p/file.mp4?loc=external&amp;signature=8b8ba54d651b7603f373209aaec33f850b5c1c2677346cc3364086f129c1f4db">                  
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">deezer</a>
+                    <video class="Slide-video" autoplay muted loop playsinline loading="lazy"> <source data-src="https://player.vimeo.com/progressive_redirect/playback/933666632/rendition/1080p/file.mp4?loc=external&amp;signature=536fe92dfcdd17942add66b951b72defa92c2234a6c6943e851a18ec62521b1d" type="video/mp4" src="https://player.vimeo.com/progressive_redirect/playback/933666632/rendition/1080p/file.mp4?loc=external&amp;signature=536fe92dfcdd17942add66b951b72defa92c2234a6c6943e851a18ec62521b1d">                 
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">glassdoor</a>
+                    <video class="Slide-video" autoplay muted loop playsinline loading="lazy">  <source data-src="https://player.vimeo.com/progressive_redirect/playback/933666647/rendition/1080p/file.mp4?loc=external&amp;signature=c8528579f51a9ab26c55c18dca26c3c49ee6e875c824719afbeca75fc154b687" type="video/mp4" src="https://player.vimeo.com/progressive_redirect/playback/933666647/rendition/1080p/file.mp4?loc=external&amp;signature=c8528579f51a9ab26c55c18dca26c3c49ee6e875c824719afbeca75fc154b687">                
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">bolt t</a>
+                    <picture class="Slide-picture">
+                        <img class="Slide-img" src="./assets/Slide-8.png" alt="Koto Studio" loading="lazy">  
+                    </picture>
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">whatsapp</a>
+                    <video class="Slide-video" autoplay muted loop playsinline loading="lazy"><source data-src="https://player.vimeo.com/progressive_redirect/playback/933666709/rendition/1080p/file.mp4?loc=external&amp;signature=c93bc9b3c71d6549291e38a1de94e0209e5f21ffc054670b50af11bb17857e7d" type="video/mp4" src="https://player.vimeo.com/progressive_redirect/playback/933666709/rendition/1080p/file.mp4?loc=external&amp;signature=c93bc9b3c71d6549291e38a1de94e0209e5f21ffc054670b50af11bb17857e7d">                 
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">walkietalkie</a>
+                    <video class="Slide-video" autoplay muted loop playsinline loading="lazy"> <source data-src="https://player.vimeo.com/progressive_redirect/playback/933666689/rendition/1080p/file.mp4?loc=external&amp;signature=dfe322afeef74b3b09c054710a944ec6e15ab27b882b9f9511dbc5ec8b424bb3" type="video/mp4" src="https://player.vimeo.com/progressive_redirect/playback/933666689/rendition/1080p/file.mp4?loc=external&amp;signature=dfe322afeef74b3b09c054710a944ec6e15ab27b882b9f9511dbc5ec8b424bb3">                
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">the washington post</a>
+                    <picture class="Slide-picture">
+                        <img class="Slide-img" src="./assets/Slide-11.jpeg" alt="Koto Studio" loading="lazy">  
+                    </picture>
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">netflix</a>
+                    <video class="Slide-video" autoplay muted loop playsinline loading="lazy">   <source data-src="https://player.vimeo.com/progressive_redirect/playback/933666661/rendition/1080p/file.mp4?loc=external&amp;signature=4692be56e45c451b4b15066a38cf5f9854a0d29c081562cd40f068fddee2adde" type="video/mp4" src="https://player.vimeo.com/progressive_redirect/playback/933666661/rendition/1080p/file.mp4?loc=external&amp;signature=4692be56e45c451b4b15066a38cf5f9854a0d29c081562cd40f068fddee2adde">            
+                </div>
+                <div class="Slide-div">
+                    <a href="#" class="Slide-a" title="disable">polkadot</a>
+                    <video class="Slide-video" autoplay muted loop playsinline loading="lazy"><source data-src="https://player.vimeo.com/progressive_redirect/playback/933666674/rendition/1080p/file.mp4?loc=external&amp;signature=db4fc3776b9456cf27175c8d1cf06a9e3b43eed6af89a05e422b5df5c351205b" type="video/mp4" src="https://player.vimeo.com/progressive_redirect/playback/933666674/rendition/1080p/file.mp4?loc=external&amp;signature=db4fc3776b9456cf27175c8d1cf06a9e3b43eed6af89a05e422b5df5c351205b">                
+                </div>
+
+            </div>
+        </div>
+
+        <button class="Slide-button Next" title="Next"></button>
+        <button class="Slide-button Prev" title="Prev"></button>
+
+        
+    </section>
+
+    <section class="Main-section Feed">
+        <div class="Feed-wrapper">
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <video src="assets/feed_uno.mp4" autoplay muted loop playsinline loading="lazy" class="Feed-video"></video>
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Freetrade: Countdown to Relaunch</h2>
+                    <p class="Feed-p">
+                        Seven years on from our initial project, we reunited with the Freetrade team as they launch a wave of product and service upgrades; a new dawn for the business and its customers. Together we’ve crafted a new digitally-led brand identity, with vibrant gradients, illuminated illustrations and aurora-inspired animations, that combine to bring Freetrade’s bold vision for investing to life.
+                    </p>
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <video src="assets/feed_dos.mp4" autoplay muted loop playsinline loading="lazy" class="Feed-video"></video>
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Pairpoint: The missing Link</h2>
+                    <p class="Feed-p">
+                        By 2030 there will be 30 billion ‘connected’ devices. Their ability to connect to each other, however, is constrained by the brands, networks and ecosystems they belong to.
+                    </p>
+                    <p class="Feed-p">
+                        That’s why Vodafone and Sumitomo Corporation have joined forces to launch Pairpoint – a revolutionary technology that enables any of these devices to interact and transact with others, securely and autonomously.
+                    </p>
+                       
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <video src="assets/feed_tres.mp4" autoplay muted loop playsinline loading="lazy" class="Feed-video"></video>
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Fitbit Ace LTE: Because It's fun</h2>
+                    <p class="Feed-p">
+                        Fitbit Ace LTE is a new kids wearable brought to you by Google. It’s the first ever connected smartwatch designed to get kids off the couch and into the chicken-space-race (yeah, that’s a thing). With 4G LTE and a gazillion games, you’re always close to home, and never far from fun.
+                    </p>
+                    <p class="Feed-p">
+                        Google approached us to build a brand and design system around Ace LTE’s four core attributes – Bold, Playful, Weird and Loveable – that speaks to the zest of childhood and the dream of independence they long for.
+                    </p>
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <video src="assets/feed_cuatro.mp4" autoplay muted loop playsinline loading="lazy" class="Feed-video"></video>
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Off.Brand: What's the role of branding in the early stages?</h2>
+                    <p class="Feed-p">
+                        Thriving companies are built on three pillars: Product, Growth, and Brand, creating a powerful flywheel—even from the start.
+                    </p>
+                    <p class="Feed-p">
+                        At launch, among many competitors, a standout feature alone isn’t enough. This is very true in B2B, where a lack of reputation and trust can undermine feature-focused sales efforts.
+                    </p>
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <img class="Feed-img" src="assets/feed-cino.png" alt="Koto Studio" loading="lazy">
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Copilot+PC</h2>
+                    <p class="Feed-p">
+                        Copilot+ PC is a new class of PC powered by Microsoft’s Copilot AI. They’re the fastest and most intelligent Windows PCs ever built, aiming to make life brighter by lightening workloads, enhancing human creativity, and simplifying the day-to-day.
+                    </p>
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <img class="Feed-img" src="assets/feed-seis.png" alt="Koto Studio" loading="lazy">
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Fluz</h2>
+                    <p class="Feed-p">
+                        Live life on max with Fluz. Part everyday payments app, part rewards scheme, part social network, Fluz transforms ordinary spends into VIP experiences. We created a brand strategy, visual and verbal identity, and product experience that celebrate how Fluz helps anyone maximize their money.                    </p>
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <video src="assets/feed_siete.mp4" autoplay muted loop playsinline loading="lazy" class="Feed-video"></video>
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Off.Brand: The truth about brand strategy. And why your company needs one.</h2>
+                    <p class="Feed-p">
+                        What is brand strategy, and why does your company need one? 🧠
+                    </p>
+                    <p class="Feed-p">
+                        Brand strategy is essential to anchor your brand at the crossroads of macro and micro trends and consumer behaviours. It leverages your unique purpose, differentiates you from competitors, and capitalises on your industry’s hidden truths.
+                    </p>
+                    <p class="Feed-p">
+                        For our second OFF Brand issue, learn what brand strategy is, what it’s not, why it matters, how to build one, how to use it, and tips, tools, and frameworks to get started.
+                    </p>
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <video src="assets/feed_ocho.mp4" autoplay muted loop playsinline loading="lazy" class="Feed-video"></video>
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Microsoft: Unique Unites Us</h2>
+                    <p class="Feed-p">
+                        For #GAAD, we partnered with @microsoft to showcase how AI is revolutionising access to technology. We crafted a vibrant campaign toolkit inspired by nature’s diversity, showcasing how AI can personalise the tech experience for everyone.
+                    </p>
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <video src="assets/feed_nueve.mp4" autoplay muted loop playsinline loading="lazy" class="Feed-video"></video>
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Off.Brand: Our first insight-packed newsletter</h2>
+                    <p class="Feed-p">
+                        Ever questioned the value of brand consistency? Or the importance of branding for early-stage startups? Found yourself stuck while brainstorming names for your company or product?
+                    </p>
+                    <p class="Feed-p">
+                        This is exactly why we’re launching OFF.Brand.
+                    </p>
+                    <p class="Feed-p">
+                        Our goal is to share the latest and greatest insights (not just our own) on a variety of critical subjects. We aspire for this newsletter to become a trusted resource for marketing professionals and brand enthusiasts alike. Think: practical tips, actionable insights, useful frameworks, and relevant examples — all designed to elevate your brand.
+                    </p>
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <video src="assets/feed_die.mp4" autoplay muted loop playsinline loading="lazy" class="Feed-video"></video>
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Google: Bard is now Gemini✨</h2>
+                    <p class="Feed-p">
+                        Through our ongoing partnership with the google team, we co-authored a brand system that unifies Gemini and Gemini Advanced across a range of expressive consumer touchpoints.
+                    </p>
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <video src="assets/feed_once.mp4" autoplay muted loop playsinline loading="lazy" class="Feed-video"></video>
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Gustini: The Good Life</h2>
+                    <p class="Feed-p">
+                        Gustini, the German food retailer, source directly from Italy to bring everyone a taste of the Mediterranean. After years of success, they had an appetite for change. With mounting
+                    </p>               
+                </li>
+            </ul>
+            <ul class="Feed-ul">
+                <li class="Feed-li">
+                    <picture class="Feed-picture">
+                        <img src="assets/feed_doce.png" alt="Koto Studio" loading="lazy" class="Feed-img">
+                    </picture>
+                </li>
+                <li class="Feed-li">
+                    <h2 class="Feed-h2">Google Maps x Billie Eilish</h2>
+                    <p class="Feed-p">
+                        Over 70% of the music industry’s carbon emissions stem from fans traveling to shows. To help concert-goers reduce their carbon footprint while attending her Hit Me Hard and Soft tour, Billie Eilish partnered with Google Maps to promote eco-friendly travel options.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="Footer">
+    <div class="Footer-wrapper">
+        <ul class="Footer-ul Redes">
+            <li class="Redes-li">
+                <svg class="Redes-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+                <a href="#" class="Redes-a" title="disable" >Twitter</a>
+            </li>
+            <li class="Redes-li">
+                <svg class="Redes-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+                <a href="#" class="Redes-a" title="disable">Instagram</a>
+            </li>
+            <li class="Redes-li">
+                <svg class="Redes-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+                <a href="#" class="Redes-a">Linkedin</a>
+            </li>
+            <li class="Redes-li">
+                <svg class="Redes-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+                <a href="#" class="Redes-a" title="disable">Off newsletter</a>
+            </li>
+        </ul>
+
+        <div class="Footer-div Info">
+            <p class="Info-p">
+                © 2024 Koto Studio Ltd, a private limited company incorporated in England and Wales under company number 9297454, registered at 1st Floor, 127-131, Great Suffolk St, London SE1 1PP
+            </p>
+            <ul class="Info-ul">
+                <li class="Info-li">
+                    <a href="#" class="Info-a" title="disable">Manage cookies</a>
+                </li>
+                <li class="Info-li">
+                    <a href="#" class="Info-a" title="disable"> Privacy policity</a>
+                </li>
+                <li class="Info-li">
+                    <a href="#" class="Info-a" title="disable">Terms of use</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</footer>
+
+    
+</body>
+</html>
